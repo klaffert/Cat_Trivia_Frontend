@@ -66,7 +66,6 @@ readyButton.addEventListener("submit", function(event) {
     }
   }
 
-
   const addedUser = {
     "name": userInput,
     "profile_picture_id": userProfilePic,
@@ -91,10 +90,10 @@ readyButton.addEventListener("submit", function(event) {
   })
 
   profileBox.innerText = addedUser.name
-  // console.log
-  profileBox.append(profilePicture)
-  // debugger
-  // addedUser.profile_picture_id
+  const picture = document.createElement("img")
+  picture.setAttribute("src", profilePicture)
+  profileBox.append(picture)
+
   
 })
 
@@ -218,7 +217,9 @@ function scoreboard() {
 
 
     listName.append(listItem1)
+  
     listScore.append(listItem2)
+
   
     }
   })
