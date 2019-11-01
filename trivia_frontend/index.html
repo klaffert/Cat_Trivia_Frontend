@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Kat Trivia</title>
+    <title>Cat Trivia</title>
 
     <link rel="stylesheet" href="src/index.css">
   </head>
@@ -11,36 +11,46 @@
 
  <div id = "home-page">
     <div id="welcome-message" class="hide-home">
-      <h1>KAT TRIVIA</h1>
+      <h1>CAT TRIVIA</h1>
  </div>
 
 
-  <form id="submit-form">
+  <form id="submit-form" class = "hide-home">
     <div id="enter-name" class="hide-home">
-          <label for="name">Enter Name</label>
+          <label for="name" style ="background-color: #279">Enter Name: </label>
           <input type="text" name="name" placeholder="Type name here"/>
     </div>
 
     <div id="profile-pictures" class="hide-home">
-        <fieldset>
-          <h3>CHOOSE PROFILE PICCHUR</h3>
+        <!-- <fieldset> -->
+          <h4 style ="background-color: #279">Choose Profile Picture: </h4>
             <input type="radio" name="profile_picture_id" id="picture1" value="1"><img src= "https://ei.marketwatch.com/Multimedia/2013/10/04/Photos/MG/MW-BM546_pfcats_20131004154326_MG.jpg?uuid=47b106e4-2d2d-11e3-886d-00212803fad6" alt="Money Cat">
             <input type="radio" name="profile_picture_id" id="picture2" value="2"><img src= "https://st2.depositphotos.com/2412817/5730/i/950/depositphotos_57307411-stock-photo-very-tired-cat-on-a.jpg" alt="Tired Cat">
             <input type="radio" name="profile_picture_id" id="picture3" value="3"><img src= "http://ihavecat.com/wp-content/uploads/2014/01/BUSINESSCAT_edited-1.jpg" alt="Business Cat">
             <input type="radio" name="profile_picture_id" id="picture4" value="4"><img src= "https://i0.wp.com/spaymart.org/wp-content/uploads/2017/09/Excited-Cat.jpg?ssl=1" alt="Excited Cat">
             <input type="radio" name="profile_picture_id" id="picture5" value="5"><img src= "https://pbs.twimg.com/profile_images/1080545769034108928/CEzHCTpI_400x400.jpg" alt="Grumpy Cat">
             <input type="radio" name="profile_picture_id" id="picture6" value="6"><img src= "https://www.quickanddirtytips.com/sites/default/files/styles/article_main_image/public/images/7973/shutterstock_684452320-compressor.png?itok=dvkPwSfX" alt="Happy Cat">
-        </fieldset>
+        <!-- </fieldset> -->
     </div>
 
   <div id="ready-button" class="hide-home">
-      <input type="submit" value="Ready!">
+      <input type="submit" value="Start">
   </div>
   </form>
 
   <div id="scoreboard" class="hide-home">
-    <h3>SCOREBORD</h3>
-    <div class="row">
+    <h4 style ="background-color: #279">SCOREBOARD</h4>
+    <table class="row">
+      <tr class="column">
+        <th>Name</th>
+        <td id="scorer-name"></td>
+        <th>Score</th>
+        <td id="scorer-score"></td>
+      </tr>
+    </table>
+
+
+    <!-- <div class="row">
         <div class="column">
           <h2>Name</h2>
           <ul id="scorer-name"></ul>
@@ -49,7 +59,7 @@
           <h2>Score</h2>
           <ul id="scorer-score"></ul>
         </div>
-      </div>
+      </div> -->
 
   </div>
 </div>
@@ -59,11 +69,11 @@
   <div id = "question-page" class="">
         <ul id = "answer-list">
             <form id = "question-form">
-                <input type="radio" name="answer" value="1" id="answer1"><span id="radio-button-1"></span></input><br>
-                <input type="radio" name="answer" value="2" id="answer2"><span id="radio-button-2"></span> </input><br>
-                <input type="radio" name="answer" value="3" id="answer3"><span id="radio-button-3"></span></input><br>
-                <input type="radio" name="answer" value="4" id="answer4"><span id="radio-button-4"></span> </input><br>
-                <input type="submit" name="submit" value="AM I RITE?" id="submit-button"></input>
+                <input type="radio" name="answer" value="1" id="answer1"><span id="radio-button-1"></span></input>
+                <input type="radio" name="answer" value="2" id="answer2"><span id="radio-button-2"></span> </input>
+                <input type="radio" name="answer" value="3" id="answer3"><span id="radio-button-3"></span></input>
+                <input type="radio" name="answer" value="4" id="answer4"><span id="radio-button-4"></span> </input>
+                <input type="submit" name="submit" value="Am I right?" id="submit-button"></input>
             </form>
         </ul>
   </div>
@@ -75,7 +85,7 @@
     <h3 id="score"></h3>
   </div>
 
-  <button id="go-home">Go Back to Home</button>
+  <button id="go-home">Go back to home</button>
 
  </div>
 
